@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.h">
+      <Filter>Source\Headers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Settings.h">
+      <Filter>Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Setup.hpp">
+      <Filter>Source\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Framerate.hpp">
+      <Filter>Source\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>Source\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Bloom.hpp">
+      <Filter>Source\Filters</Filter>
+    </ClInclude>
+    <ClInclude Include="AllFilters.h">
+      <Filter>Source\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a518c423-1bb7-4a6c-9c9e-90f07bf7b732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Headers">
+      <UniqueIdentifier>{811b2400-838e-44b6-946e-02bfc177489f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Helpers">
+      <UniqueIdentifier>{89ce8df0-135c-48cc-819f-572ceb788933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Filters">
+      <UniqueIdentifier>{f6299d03-cc34-4c70-9d9a-7b11a6dd74b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
