@@ -14,7 +14,7 @@ inline void GrabScreen(Mat& mat, const Rect& rect, const int bitmap_width, const
 }
 
 
-inline void ShowResults(Mat& mat)
+inline void ShowMat(Mat& mat)
 {
   imshow(kVisualiserWindowName, mat);
   waitKeyEx(1);

@@ -33,8 +33,8 @@ inline void Setup()
 
   RECT rect;
   GetClientRect(hwnd, &rect);
-  bitmap_width = (rect.right - rect.left);
-  bitmap_height = (rect.bottom - rect.top);
+  bitmap_width = (rect.right - rect.left) / downscaler;
+  bitmap_height = (rect.bottom - rect.top) / downscaler;
 
   InitialiseDeviceContextStuffs(bitmap_width, bitmap_height);
 

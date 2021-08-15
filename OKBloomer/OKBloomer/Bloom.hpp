@@ -3,14 +3,12 @@
 
 inline void ApplyBloom(Mat& mat)
 {
-  FilterByLuminanceThresh(mat);
+  Mat scratch = mat.clone();
 
-  Blur(mat);
+  FilterByLuminanceThresh(scratch);
 
-  //AL.
-  //Apply Gaussian blur to specified setting
-  //Add image back to src ( additively?) 
+  Blur(scratch);
 
-  //cvtColor(src, dst, COLOR_BGR2GRAY);
+  AddImages(mat, scratch);
 }
 

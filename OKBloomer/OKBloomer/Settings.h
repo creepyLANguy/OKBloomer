@@ -12,4 +12,7 @@ inline const int luminanceThresh = 220; //0,255
 
 inline const int kernelDim = 80; //45;
 
-inline bool preventVisualiserWindowInScreenshot = true;
+//inline const bool preventVisualiserWindowInScreenshot = true;
+inline const bool preventVisualiserWindowInScreenshot = false;
+
+inline const int downscaler = 1;
