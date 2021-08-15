@@ -1,7 +1,14 @@
 #pragma once
+#include "RGBOperations.hpp"
 
-inline void ApplyBloom(Mat& src, Mat& dst)
+inline void ApplyBloom(Mat& mat)
 {
+  FilterByLuminanceThresh(mat, luminanceThresh);
+
   //AL.
-  cvtColor(src, dst, COLOR_BGR2GRAY);
+  //Apply Gaussian blur to specified setting
+  //Add image back to src ( additively?) 
+
+  //cvtColor(src, dst, COLOR_BGR2GRAY);
 }
+

@@ -33,12 +33,12 @@ inline void Setup()
 
   RECT rect;
   GetClientRect(hwnd, &rect);
-  bitmap_width = (rect.right - rect.left) / downscaler;
-  bitmap_height = (rect.bottom - rect.top) / downscaler;
+  bitmap_width = (rect.right - rect.left);
+  bitmap_height = (rect.bottom - rect.top);
 
   InitialiseDeviceContextStuffs(bitmap_width, bitmap_height);
 
-  srcMat = dstMat = Mat(bitmap_height, bitmap_width, imageType);
+  srcMat = Mat(bitmap_height, bitmap_width, imageType);
 
   simpleRect = {
     rect.left,

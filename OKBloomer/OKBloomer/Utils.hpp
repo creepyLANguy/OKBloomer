@@ -20,5 +20,4 @@ inline void ShowResults(Mat& mat)
   waitKeyEx(1);
 
   keepRunning = getWindowProperty(kVisualiserWindowName, WND_PROP_VISIBLE) != 0;
-
 }

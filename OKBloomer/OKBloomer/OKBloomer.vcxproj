@@ -72,17 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>OKBloomer</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>ProjectLuna</TargetName>
+    <TargetName>OKBloomer</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>OKBloomer</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>ProjectLuna</TargetName>
+    <TargetName>OKBloomer</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -168,6 +170,7 @@
     <ClInclude Include="AllFilters.h" />
     <ClInclude Include="Bloom.hpp" />
     <ClInclude Include="Framerate.hpp" />
+    <ClInclude Include="RGBOperations.hpp" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Setup.hpp" />
     <ClInclude Include="Utils.hpp" />

@@ -8,7 +8,7 @@
 using namespace std;
 using namespace cv;
 
-inline Mat srcMat, dstMat;
+inline Mat srcMat;
 
 inline int bitmap_width;
 inline int bitmap_height;

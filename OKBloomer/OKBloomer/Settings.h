@@ -1,11 +1,11 @@
 #pragma once
 
-inline bool fps_cmd = true;
+inline bool fps_cmd = false;
 inline bool fps_ide = true;
-
-inline int downscaler = 1;
 
 inline const char* kApplicationName = "OKBloomer";
 inline const char* kVisualiserWindowName = "OKBloomer - Debug Visualiser";
 
-constexpr auto imageType = CV_8UC4;
+const auto imageType = CV_8UC4;
+
+inline const int luminanceThresh = 220; //0,255

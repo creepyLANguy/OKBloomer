@@ -12,11 +12,12 @@ int main(const int argc, char** argv)
   {
     GrabScreen(srcMat, simpleRect, bitmap_width, bitmap_height);
 
-    ApplyBloom(srcMat, dstMat);
+    //auto dstMat = Mat(srcMat);
+    ApplyBloom(srcMat);    
 
     UpdateDebugTimer();
 
-    ShowResults(dstMat);
+    ShowResults(srcMat);
   }
 
   CleanUpDeviceContextStuffs();
