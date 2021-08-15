@@ -49,8 +49,11 @@ inline void Setup()
 
   namedWindow(kVisualiserWindowName, WINDOW_NORMAL);
 
-  const HWND handle_visualiser = FindWindowA("Main HighGUI class", kVisualiserWindowName);
-  SetWindowDisplayAffinity(handle_visualiser, WDA_MONITOR);
+  if (preventVisualiserWindowInScreenshot)
+  {
+    const HWND handle_visualiser = FindWindowA("Main HighGUI class", kVisualiserWindowName);
+    SetWindowDisplayAffinity(handle_visualiser, WDA_MONITOR);
+  }
 }
 
 

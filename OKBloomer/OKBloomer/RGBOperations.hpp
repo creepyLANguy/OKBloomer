@@ -8,7 +8,7 @@ struct Lumi
 };
 Lumi lumi;
 
-inline void FilterByLuminanceThresh(Mat& mat, const int thresh)
+inline void FilterByLuminanceThresh(Mat& mat)
 {
   auto* pixelPtr = static_cast<uint8_t*>(mat.data);
   const int cn = mat.channels();
@@ -22,7 +22,7 @@ inline void FilterByLuminanceThresh(Mat& mat, const int thresh)
         lumi.g * pixelPtr[y * mat.cols * cn + x * cn + 1] +
         lumi.b * pixelPtr[y * mat.cols * cn + x * cn + 0];
 
-      if (lumiTotal < thresh)
+      if (lumiTotal < luminanceThresh)
       {
         pixelPtr[y * mat.cols * cn + x * cn + 2] = 0;
         pixelPtr[y * mat.cols * cn + x * cn + 1] = 0;
@@ -30,4 +30,12 @@ inline void FilterByLuminanceThresh(Mat& mat, const int thresh)
       }
     }
   }
+}
+
+inline void Blur(Mat& mat) {
+
+  const Size kernelSize = Size(kernelDim*2, kernelDim*2);
+
+  //GaussianBlur(mat, mat, kernelSize, 0, 0);
+  blur(mat, mat, kernelSize);
 }

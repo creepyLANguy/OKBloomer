@@ -3,7 +3,9 @@
 
 inline void ApplyBloom(Mat& mat)
 {
-  FilterByLuminanceThresh(mat, luminanceThresh);
+  FilterByLuminanceThresh(mat);
+
+  Blur(mat);
 
   //AL.
   //Apply Gaussian blur to specified setting
