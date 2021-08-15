@@ -1,7 +1,7 @@
 #pragma once
 #include "RGBOperations.hpp"
 
-inline void ApplyBloom(Mat& mat)
+inline void ApplyBloom_Altamish(Mat& mat)
 {
   Mat scratch = mat.clone();
 
@@ -10,5 +10,13 @@ inline void ApplyBloom(Mat& mat)
   Blur(scratch);
 
   AddImages(mat, scratch);
+}
+
+inline void ApplyBloom_Activision(Mat& mat)
+{
+  Mat scratch = mat.clone();
+
+  //AL.
+  //TODO
 }
 

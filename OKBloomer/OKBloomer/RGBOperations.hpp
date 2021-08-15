@@ -1,12 +1,6 @@
 #pragma once
 
-struct Lumi
-{
-  float r = 0.33f;
-  float g = 0.50f;
-  float b = 0.17f;
-};
-Lumi lumi;
+const float luminanceModifiers[3] = { 0.17f,  0.50f, 0.33f };
 
 inline void FilterByLuminanceThresh(Mat& mat)
 {
@@ -17,20 +11,23 @@ inline void FilterByLuminanceThresh(Mat& mat)
   {
     for (int y = 0; y < mat.rows; ++y)
     {
-      const int lumiTotal =
-        lumi.r * pixelPtr[y * mat.cols * cn + x * cn + 2] +
-        lumi.g * pixelPtr[y * mat.cols * cn + x * cn + 1] +
-        lumi.b * pixelPtr[y * mat.cols * cn + x * cn + 0];
+      float lumiTotal = 0;
+      for (int i = 0; i < 3; ++i)
+      {
+        lumiTotal += luminanceModifiers[i] * pixelPtr[y * mat.cols * cn + x * cn + i];
+      }
 
       if (lumiTotal < luminanceThresh)
       {
-        pixelPtr[y * mat.cols * cn + x * cn + 2] = 0;
-        pixelPtr[y * mat.cols * cn + x * cn + 1] = 0;
-        pixelPtr[y * mat.cols * cn + x * cn + 0] = 0;
+        for (int i = 0; i < 3; ++i)
+        {
+          pixelPtr[y * mat.cols * cn + x * cn + i] = 0;
+        }
       }
     }
   }
 }
+
 
 inline void Blur(Mat& mat) {
 
@@ -39,6 +36,7 @@ inline void Blur(Mat& mat) {
   //blur(mat, mat, kernelSize);
   boxFilter(mat, mat, -1, kernelSize);
 }
+
 
 inline void AddImages(Mat& base, Mat& layer)
 {
@@ -51,13 +49,11 @@ inline void AddImages(Mat& base, Mat& layer)
   {
     for (int y = 0; y < base.rows; ++y)
     {
-      const int r = basePtr[y * base.cols * cn + x * cn + 2] + layerPtr[y * base.cols * cn + x * cn + 2];
-      const int g = basePtr[y * base.cols * cn + x * cn + 1] + layerPtr[y * base.cols * cn + x * cn + 1];
-      const int b = basePtr[y * base.cols * cn + x * cn + 0] + layerPtr[y * base.cols * cn + x * cn + 0];
-
-      basePtr[y * base.cols * cn + x * cn + 2] = r > 255 ? 255 : r;
-      basePtr[y * base.cols * cn + x * cn + 1] = g > 255 ? 255 : g;
-      basePtr[y * base.cols * cn + x * cn + 0] = b > 255 ? 255 : b;
+      for (int i = 0; i < 3; ++i)
+      {
+        const int val = basePtr[y * base.cols * cn + x * cn + i] + layerPtr[y * base.cols * cn + x * cn + i];
+        basePtr[y * base.cols * cn + x * cn + i] = val > 255 ? 255 : val;
+      }
     }
   }
 }

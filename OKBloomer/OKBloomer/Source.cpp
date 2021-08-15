@@ -12,7 +12,7 @@ int main(const int argc, char** argv)
   {
     GrabScreen(srcMat, simpleRect, bitmap_width, bitmap_height);
 
-    ApplyBloom(srcMat);    
+    ApplyBloom_Altamish(srcMat);    
 
     UpdateDebugTimer();
 
