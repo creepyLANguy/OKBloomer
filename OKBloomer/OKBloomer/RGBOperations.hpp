@@ -34,7 +34,7 @@ inline void FilterByLuminanceThresh(Mat& mat)
 
 inline void Blur(Mat& mat) {
 
-  const Size kernelSize = Size(kernelDim*2, kernelDim*2);
+  const Size kernelSize = Size(kernelDim, kernelDim);
 
   //blur(mat, mat, kernelSize);
   boxFilter(mat, mat, -1, kernelSize);
