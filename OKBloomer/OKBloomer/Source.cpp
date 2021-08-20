@@ -12,11 +12,12 @@ int main(const int argc, char** argv)
   {
     GrabScreen(srcMat, simpleRect, bitmap_width, bitmap_height);
 
-    ApplyBloom_Altamish(srcMat);    
+    //ApplyBloom_Altamish(srcMat);
+    ApplyBloom_Activision(srcMat);    
 
     UpdateDebugTimer();
 
-    ShowMat(srcMat);
+    ShowMat(srcMat, kVisualiserWindowName);
   }
 
   CleanUpDeviceContextStuffs();

@@ -14,10 +14,23 @@ inline void GrabScreen(Mat& mat, const Rect& rect, const int bitmap_width, const
 }
 
 
-inline void ShowMat(Mat& mat)
+inline void ShowMat(Mat& mat, const char* windowName)
 {
-  imshow(kVisualiserWindowName, mat);
+  imshow(windowName, mat);
   waitKeyEx(1);
 
-  keepRunning = getWindowProperty(kVisualiserWindowName, WND_PROP_VISIBLE) != 0;
+  keepRunning = getWindowProperty(windowName, WND_PROP_VISIBLE) != 0;
 }
+
+inline void ShowMats(vector<Mat>& mats)
+{
+  int i = 0;
+  for (auto mat : mats)
+  {
+    ++i;
+    char b[64] = { 0 };
+    _itoa_s(i, b, 10);
+    ShowMat(mat, b);
+  }
+}
+  

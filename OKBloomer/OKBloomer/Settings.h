@@ -16,3 +16,10 @@ inline const bool preventVisualiserWindowInScreenshot = true;
 //inline const bool preventVisualiserWindowInScreenshot = false;
 
 inline const int downscaler = 1;
+
+
+
+//Activision
+inline const int downsamples = 13;
+
+
