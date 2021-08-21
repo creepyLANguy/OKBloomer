@@ -33,4 +33,3 @@ inline void ShowMats(vector<Mat>& mats)
     ShowMat(mat, b);
   }
 }
-  

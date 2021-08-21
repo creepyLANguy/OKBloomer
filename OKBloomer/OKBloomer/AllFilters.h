@@ -1,3 +1,4 @@
 #pragma once
 
-#include "Bloom.hpp"
+#include "Bloom_Altamish.hpp"
+#include "Bloom_Activision.hpp"

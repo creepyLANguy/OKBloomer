@@ -1,48 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Globals.h">
-      <Filter>Source\Headers</Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Filters">
+      <UniqueIdentifier>{4fc8ff72-94da-4ee6-b9af-b72d431dbbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{8b3f3689-2137-43a9-ad10-be6cbf297737}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="OKBloomer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Settings.h">
-      <Filter>Source\Headers</Filter>
+    <ClInclude Include="AllFilters.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Setup.hpp">
-      <Filter>Source\Helpers</Filter>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bloom_Altamish.hpp">
+      <Filter>Filters</Filter>
+    </ClInclude>
+    <ClInclude Include="Bloom_Activision.hpp">
+      <Filter>Filters</Filter>
     </ClInclude>
     <ClInclude Include="Framerate.hpp">
-      <Filter>Source\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils.hpp">
-      <Filter>Source\Helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="Bloom.hpp">
-      <Filter>Source\Filters</Filter>
-    </ClInclude>
-    <ClInclude Include="AllFilters.h">
-      <Filter>Source\Headers</Filter>
+      <Filter>Helpers</Filter>
     </ClInclude>
     <ClInclude Include="RGBOperations.hpp">
-      <Filter>Source\Helpers</Filter>
+      <Filter>Helpers</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Source">
-      <UniqueIdentifier>{a518c423-1bb7-4a6c-9c9e-90f07bf7b732}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Headers">
-      <UniqueIdentifier>{811b2400-838e-44b6-946e-02bfc177489f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Helpers">
-      <UniqueIdentifier>{89ce8df0-135c-48cc-819f-572ceb788933}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Filters">
-      <UniqueIdentifier>{f6299d03-cc34-4c70-9d9a-7b11a6dd74b6}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="Setup.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

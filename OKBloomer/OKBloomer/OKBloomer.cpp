@@ -8,12 +8,12 @@ int main(const int argc, char** argv)
 {
   Setup();
 
-  while(keepRunning)
+  while (keepRunning)
   {
     GrabScreen(srcMat, simpleRect, bitmap_width, bitmap_height);
 
-    //ApplyBloom_Altamish(srcMat);
-    ApplyBloom_Activision(srcMat);    
+    ApplyBloom_Altamish(srcMat);
+    //ApplyBloom_Activision(srcMat);
 
     UpdateDebugTimer();
 
