@@ -1,3 +1,5 @@
+#pragma once
+
 inline void ApplyBloom_Activision(Mat& mat)
 {
   auto scratch = mat.clone();
@@ -24,6 +26,7 @@ inline void ApplyBloom_Activision(Mat& mat)
     upscaled.push_back(sample);
   }
 
+  ShowMats(upscaled);
 
   //AL.
   //TODO

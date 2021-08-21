@@ -15,7 +15,7 @@ inline const int kernelDim = 160; //45;
 inline const bool preventVisualiserWindowInScreenshot = true;
 //inline const bool preventVisualiserWindowInScreenshot = false;
 
-inline const int downscaler = 1;
+inline const int downscaler = 2;
 
 
 
